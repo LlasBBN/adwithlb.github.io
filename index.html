@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADwithLB | Direct Growth. Human-made.</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #0a0a0a;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .services li {
+      background-color: #f0f4ff;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-left: 5px solid #3b82f6;
+    }
+    .contact-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #f3f4f6;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactButton = document.querySelector('.contact-button');
+      contactButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector('#contact');
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>ADwithLB</h1>
+    <p>Direct growth. Human-made.</p>
+    <a class="contact-button" href="#contact">Let’s Talk</a>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m <strong>Llas Karem</strong>, the founder of ADwithLB and the driving force behind every campaign. With hands-on experience as a Secretary Assistant at Elafive Residences, I’ve honed organization skills, communication, and adaptability. My education at Geitonas School sharpened my eye for detail. I learn fast, think on my feet, and treat every brand like it’s mine.</p>
+  </section>
+
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li><strong>Social Media Management:</strong> Posting, engaging, growing.</li>
+      <li><strong>Paid Ads:</strong> Meta, Google, TikTok — performance-focused.</li>
+      <li><strong>Reels & Shorts:</strong> Short-form content that clicks.</li>
+      <li><strong>Brand Strategy:</strong> Positioning, storytelling, aesthetics.</li>
+      <li><strong>Growth Consulting:</strong> Custom plans for serious results.</li>
+      <li><strong>Google Maps Optimization:</strong> Boost visibility and reach through accurate, strategic map listings and updates.</li>
+    </ul>
+  </section>
+
+  <section class="why">
+    <h2>Why Work With Me</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div class="fade-in" style="background-color: #f0f4ff; padding: 20px; border-left: 5px solid #3b82f6;">
+        <h3>Real Organic Growth</h3>
+        <p>I build engaged communities through consistent, relevant, and original content — no follow/unfollow tactics, no fake engagement.</p>
+      </div>
+      <div class="fade-in" style="background-color: #f0f4ff; padding: 20px; border-left: 5px solid #3b82f6;">
+        <h3>Human-First Approach</h3>
+        <p>I work directly with you, listen to your needs, and build strategy from scratch. You talk to me, not an agency robot.</p>
+      </div>
+      <div class="fade-in" style="background-color: #f0f4ff; padding: 20px; border-left: 5px solid #3b82f6;">
+        <h3>Platform-Smart Tactics</h3>
+        <p>Every platform is different. I know what performs best on Instagram, TikTok, Google Maps, and I tailor content and growth strategies accordingly.</p>
+      </div>
+      <div class="fade-in" style="background-color: #f0f4ff; padding: 20px; border-left: 5px solid #3b82f6;">
+        <h3>Transparency & Honesty</h3>
+        <p>If I think something won’t work for your brand — I’ll say it. I believe in long-term relationships, not short-term wins.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <p>Coming soon. In the meantime, feel free to reach out and ask what I can do.</p>
+  </section>
+
+  <section id="contact" style="background-color: #e0ecff; padding: 60px 20px; text-align: center;">
+    <h2 style="color: #1e3a8a;">Let’s Connect</h2>
+    <p style="font-size: 1.1em; max-width: 600px; margin: auto;">If you’re ready to grow, I’m ready to listen. Whether you have a quick question or a full-blown idea, drop me a line — I reply to every message personally.</p>
+    <div style="margin-top: 30px;">
+      <a href="https://instagram.com/llas.bbn" target="_blank" style="margin: 10px; display: inline-block; padding: 12px 25px; background-color: #3b82f6; color: white; text-decoration: none; border-radius: 5px;">Message Me on Instagram</a>
+      <a href="mailto:llas.bbn@gmail.com" target="_blank" style="margin: 10px; display: inline-block; padding: 12px 25px; background-color: #1e3a8a; color: white; text-decoration: none; border-radius: 5px;">Email Me Directly</a>
+      <a href="https://www.linkedin.com/in/llaskarem/" target="_blank" style="margin: 10px; display: inline-block; padding: 12px 25px; background-color: #0a66c2; color: white; text-decoration: none; border-radius: 5px;">Connect on LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ADwithLB. All rights reserved.</p>
+    <a href="terms.html" style="color: #1e3a8a; text-decoration: underline; display: inline-block; margin-top: 10px; font-size: 0.9em;">View Terms & Conditions</a>
+  </footer>
+</body>
+</html>
